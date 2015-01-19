@@ -2,13 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%-- <%
-	String id =request.getParameter("id");
-	String pwd=request.getParameter("pwd");
-
-	session.setAttribute("id", "id");
-	session.setAttribute("pwd", "pwd");
-%> --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -21,15 +14,15 @@
 	String adminpwd = "1234";
 
 	String d_id =request.getParameter("id");
-	System.out.println("아이디값 넘어오나"+d_id);
+	//System.out.println("아이디값 넘어오나"+d_id);
 	String d_pwd=request.getParameter("pwd");
 
 	session.setAttribute("t_id", d_id);
-	System.out.println("세션에 저장");
+	//System.out.println("세션에 저장");
 	session.setAttribute("t_pwd", d_pwd);
 
 	String s_id=(String)session.getAttribute("t_id");
-	System.out.println("세션에서가져오기"+s_id);
+	//System.out.println("세션에서가져오기"+s_id);
 	String s_pwd=(String)session.getAttribute("t_pwd");
 	
 	if(adminid.equals(s_id) && adminpwd.equals(s_pwd))
